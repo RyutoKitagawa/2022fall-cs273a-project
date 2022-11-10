@@ -28,6 +28,6 @@ parser = PokemonHTMLParser()
 parser.feed(ladder_webpage_content.decode('utf-8'))
 
 # Output parsed data of players to a CSV file
-with open('players.csv', 'w') as outfile:
+with open('data/players.csv', 'w') as outfile:
     for index, player in enumerate(parser.players[7:]):
         outfile.write(player + (',' if index < len(parser.players[7:]) - 1 else ''))

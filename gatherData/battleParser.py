@@ -6,7 +6,7 @@ import json
 base_url = 'https://replay.pokemonshowdown.com'
 
 # Gather battle urls
-with open('battles.csv', 'r') as infile:
+with open('data/battles.csv', 'r') as infile:
     battle_urls = infile.read().split(',')
 
 # Setup for parsing the url
@@ -20,5 +20,5 @@ for battle_url in battle_urls:
     battle_webpage_content = response.read()
 
     # Write the data into a json file
-    with open('battle_log/' + battle_url + '.json', 'w') as outfile:
+    with open('data/battle_log/' + battle_url + '.json', 'w') as outfile:
         outfile.write(battle_webpage_content.decode('utf-8'))

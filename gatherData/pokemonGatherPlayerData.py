@@ -49,6 +49,6 @@ for player in players:
         battle_urls.append(battle)
 
 # Write battle urls to the battles.csv file
-with open('battles.csv', 'w') as outfile:
+with open('data/battles.csv', 'w') as outfile:
     for index, battle in enumerate(battle_urls):
         outfile.write(battle + (','), if index != len(battle_urls) - 1 else '')
