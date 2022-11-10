@@ -1,5 +1,3 @@
-from html.parser import HTMLParser
-
 import urllib.request
 import json
 
