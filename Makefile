@@ -1,4 +1,7 @@
+all:
+	python gatherData/dataObjects.py
+
 getBattleData:
-	python pokemonGatherPlayers.py
-	python pokemonGatherPlayerData.py
-	python pokemonGatherBattles.py
+	python gaterData/pokemonGatherPlayers.py
+	python gaterData/pokemonGatherPlayerData.py
+	python gaterData/pokemonGatherBattles.py
