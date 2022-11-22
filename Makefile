@@ -1,8 +1,10 @@
-all:
-	python gatherData/dataObjects.py
+all: neuralNetwork
 
 test:
 	python gatherData/test.py
+
+neuralNetwork:
+	python learningModel/neuralNetwork.py
 
 getBattleData:
 	python gaterData/pokemonGatherPlayers.py
