@@ -1,459 +1,840 @@
-|j|☆VirginJimmy99
-|j|☆cows123p
-|t:|1633915104
-|gametype|singles
-|player|p1|VirginJimmy99|rocketgrunt|1732
-|player|p2|cows123p|1|1880
-|teamsize|p1|6
-|teamsize|p2|6
-|gen|8
-|tier|[Gen 8] OU
-|rated|
-|rule|Sleep Clause Mod: Limit one foe put to sleep
-|rule|Species Clause: Limit one of each Pokémon
-|rule|OHKO Clause: OHKO moves are banned
-|rule|Evasion Moves Clause: Evasion moves are banned
-|rule|Endless Battle Clause: Forcing endless battles is banned
-|rule|HP Percentage Mod: HP is shown in percentages
-|rule|Dynamax Clause: You cannot dynamax
-|clearpoke
-|poke|p1|Salamence, M|
-|poke|p1|Landorus-Therian, M|
-|poke|p1|Scizor, M|
-|poke|p1|Zarude|
-|poke|p1|Tapu Fini|
-|poke|p1|Heatran, M|
-|poke|p2|Diggersby, F|
-|poke|p2|Azumarill, M|
-|poke|p2|Zapdos|
-|poke|p2|Ferrothorn, F|
-|poke|p2|Magnezone|
-|poke|p2|Garchomp, M|
-|teampreview
-|
-|t:|1633915162
-|start
-|switch|p1a: Salamence|Salamence, M|100/100
-|switch|p2a: Make it double|Azumarill, M|100/100
-|-ability|p1a: Salamence|Intimidate|boost
-|-unboost|p2a: Make it double|atk|1
-|turn|1
-|
-|t:|1633915173
-|move|p1a: Salamence|Hurricane|p2a: Make it double
-|-damage|p2a: Make it double|10/100
-|-start|p2a: Make it double|confusion
-|-activate|p2a: Make it double|confusion
-|move|p2a: Make it double|Liquidation|p1a: Salamence
-|-resisted|p1a: Salamence
-|-damage|p1a: Salamence|64/100
-|
-|upkeep
-|turn|2
-|
-|t:|1633915182
-|switch|p2a: Zapdos|Zapdos|100/100
-|move|p1a: Salamence|Hurricane|p2a: Zapdos
-|-resisted|p2a: Zapdos
-|-damage|p2a: Zapdos|65/100
-|
-|upkeep
-|turn|3
-|j| Reign1997
-|j| hmsa2012
-|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by cows123p)
-|j| juicelol
-|l| hmsa2012
-|
-|t:|1633915235
-|switch|p1a: Landorus|Landorus-Therian, M|100/100
-|-ability|p1a: Landorus|Intimidate|boost
-|-unboost|p2a: Zapdos|atk|1
-|move|p2a: Zapdos|Discharge|p1a: Landorus
-|-immune|p1a: Landorus
-|
-|upkeep
-|turn|4
-|
-|t:|1633915253
-|move|p2a: Zapdos|Hurricane|p1a: Landorus
-|-damage|p1a: Landorus|63/100
-|move|p1a: Landorus|U-turn|p2a: Zapdos
-|-resisted|p2a: Zapdos
-|-damage|p2a: Zapdos|56/100
-|-status|p1a: Landorus|par|[from] ability: Static|[of] p2a: Zapdos
-|
-|t:|1633915275
-|switch|p1a: Salamence|Salamence, M|64/100|[from]move: U-turn
-|-ability|p1a: Salamence|Intimidate|boost
-|-unboost|p2a: Zapdos|atk|1
-|
-|upkeep
-|turn|5
-|
-|t:|1633915281
-|switch|p2a: Fat F*ck Ferro|Ferrothorn, F|100/100
-|move|p1a: Salamence|Draco Meteor|p2a: Fat F*ck Ferro
-|-resisted|p2a: Fat F*ck Ferro
-|-damage|p2a: Fat F*ck Ferro|69/100
-|-unboost|p1a: Salamence|spa|2
-|
-|-heal|p2a: Fat F*ck Ferro|75/100|[from] item: Leftovers
-|upkeep
-|turn|6
-|j| Vampirism
-|
-|t:|1633915289
-|switch|p1a: Heatran|Heatran, M|100/100
-|move|p2a: Fat F*ck Ferro|Leech Seed|p1a: Heatran
-|-start|p1a: Heatran|move: Leech Seed
-|
-|-heal|p2a: Fat F*ck Ferro|81/100|[from] item: Leftovers
-|-damage|p1a: Heatran|88/100|[from] Leech Seed|[of] p2a: Fat F*ck Ferro
-|-heal|p2a: Fat F*ck Ferro|95/100|[silent]
-|upkeep
-|turn|7
-|
-|t:|1633915297
-|move|p2a: Fat F*ck Ferro|Protect|p2a: Fat F*ck Ferro
-|-singleturn|p2a: Fat F*ck Ferro|Protect
-|move|p1a: Heatran|Stealth Rock|p2a: Fat F*ck Ferro
-|-sidestart|p2: cows123p|move: Stealth Rock
-|
-|-heal|p1a: Heatran|94/100|[from] item: Leftovers
-|-heal|p2a: Fat F*ck Ferro|100/100|[from] item: Leftovers
-|-damage|p1a: Heatran|82/100|[from] Leech Seed|[of] p2a: Fat F*ck Ferro
-|upkeep
-|turn|8
-|
-|t:|1633915314
-|switch|p1a: Salamence|Salamence, M|64/100
-|-ability|p1a: Salamence|Intimidate|boost
-|-unboost|p2a: Fat F*ck Ferro|atk|1
-|switch|p2a: Garchomp|Garchomp, M|100/100
-|-damage|p2a: Garchomp|94/100|[from] Stealth Rock
-|
-|upkeep
-|turn|9
-|l| Reign1997
-|
-|t:|1633915323
-|switch|p1a: Tapu Fini|Tapu Fini|100/100
-|-fieldstart|move: Misty Terrain|[from] ability: Misty Surge|[of] p1a: Tapu Fini
-|move|p2a: Garchomp|Stealth Rock|p1a: Tapu Fini
-|-sidestart|p1: VirginJimmy99|move: Stealth Rock
-|
-|upkeep
-|turn|10
-|
-|t:|1633915333
-|switch|p2a: Magnezone|Magnezone|100/100
-|-damage|p2a: Magnezone|94/100|[from] Stealth Rock
-|move|p1a: Tapu Fini|Knock Off|p2a: Magnezone
-|-crit|p2a: Magnezone
-|-damage|p2a: Magnezone|68/100
-|-enditem|p2a: Magnezone|Choice Scarf|[from] move: Knock Off|[of] p1a: Tapu Fini
-|
-|upkeep
-|turn|11
-|
-|t:|1633915349
-|move|p1a: Tapu Fini|Scald|p2a: Magnezone
-|-damage|p2a: Magnezone|35/100
-|move|p2a: Magnezone|Flash Cannon|p1a: Tapu Fini
-|-damage|p1a: Tapu Fini|70/100
-|
-|-heal|p1a: Tapu Fini|76/100|[from] item: Leftovers
-|upkeep
-|turn|12
-|
-|t:|1633915357
-|switch|p1a: Zarude|Zarude|100/100
-|-damage|p1a: Zarude|88/100|[from] Stealth Rock
-|move|p2a: Magnezone|Thunderbolt|p1a: Zarude
-|-resisted|p1a: Zarude
-|-damage|p1a: Zarude|65/100
-|
-|upkeep
-|turn|13
-|
-|t:|1633915366
-|switch|p2a: Garchomp|Garchomp, M|94/100
-|-damage|p2a: Garchomp|88/100|[from] Stealth Rock
-|move|p1a: Zarude|Darkest Lariat|p2a: Garchomp
-|-damage|p2a: Garchomp|52/100
-|-damage|p1a: Zarude|52/100|[from] ability: Rough Skin|[of] p2a: Garchomp
-|-damage|p1a: Zarude|36/100|[from] item: Rocky Helmet|[of] p2a: Garchomp
-|
-|-fieldend|Misty Terrain
-|upkeep
-|turn|14
-|
-|t:|1633915376
-|switch|p1a: Tapu Fini|Tapu Fini|76/100
-|-damage|p1a: Tapu Fini|63/100|[from] Stealth Rock
-|-fieldstart|move: Misty Terrain|[from] ability: Misty Surge|[of] p1a: Tapu Fini
-|move|p2a: Garchomp|Toxic|p1a: Tapu Fini
-|-activate|p1a: Tapu Fini|move: Misty Terrain
-|
-|-heal|p1a: Tapu Fini|69/100|[from] item: Leftovers
-|upkeep
-|turn|15
-|j| ok ka kokey
-|l| ok ka kokey
-|
-|t:|1633915410
-|switch|p2a: Fat F*ck Ferro|Ferrothorn, F|100/100
-|-damage|p2a: Fat F*ck Ferro|94/100|[from] Stealth Rock
-|move|p1a: Tapu Fini|Knock Off|p2a: Fat F*ck Ferro
-|-damage|p2a: Fat F*ck Ferro|83/100
-|-damage|p1a: Tapu Fini|57/100|[from] ability: Iron Barbs|[of] p2a: Fat F*ck Ferro
-|-enditem|p2a: Fat F*ck Ferro|Leftovers|[from] move: Knock Off|[of] p1a: Tapu Fini
-|
-|-heal|p1a: Tapu Fini|63/100|[from] item: Leftovers
-|upkeep
-|turn|16
-|
-|t:|1633915420
-|move|p1a: Tapu Fini|Taunt|p2a: Fat F*ck Ferro
-|-start|p2a: Fat F*ck Ferro|move: Taunt
-|move|p2a: Fat F*ck Ferro|Gyro Ball|p1a: Tapu Fini
-|-damage|p1a: Tapu Fini|18/100
-|
-|-heal|p1a: Tapu Fini|24/100|[from] item: Leftovers
-|upkeep
-|turn|17
-|j| ok ka kokey
-|l| ok ka kokey
-|j| ScraftronV3
-|
-|t:|1633915433
-|switch|p1a: Heatran|Heatran, M|82/100
-|-damage|p1a: Heatran|69/100|[from] Stealth Rock
-|move|p2a: Fat F*ck Ferro|Gyro Ball|p1a: Heatran
-|-resisted|p1a: Heatran
-|-damage|p1a: Heatran|60/100
-|
-|-heal|p1a: Heatran|67/100|[from] item: Leftovers
-|upkeep
-|turn|18
-|
-|t:|1633915441
-|switch|p2a: Garchomp|Garchomp, M|52/100
-|-damage|p2a: Garchomp|45/100|[from] Stealth Rock
-|move|p1a: Heatran|Magma Storm|p2a: Garchomp
-|-resisted|p2a: Garchomp
-|-damage|p2a: Garchomp|25/100
-|-activate|p2a: Garchomp|move: Magma Storm|[of] p1a: Heatran
-|
-|-heal|p1a: Heatran|73/100|[from] item: Leftovers
-|-damage|p2a: Garchomp|12/100|[from] move: Magma Storm|[partiallytrapped]
-|-fieldend|Misty Terrain
-|upkeep
-|turn|19
-|l| Vampirism
-|
-|t:|1633915458
-|switch|p1a: Landorus|Landorus-Therian, M|63/100 par
-|-damage|p1a: Landorus|51/100 par|[from] Stealth Rock
-|-ability|p1a: Landorus|Intimidate|boost
-|-unboost|p2a: Garchomp|atk|1
-|move|p2a: Garchomp|Earthquake|p1a: Landorus
-|-immune|p1a: Landorus
-|
-|-heal|p1a: Landorus|57/100 par|[from] item: Leftovers
-|-end|p2a: Garchomp|Magma Storm|[partiallytrapped]|[silent]
-|upkeep
-|turn|20
-|
-|t:|1633915469
-|cant|p1a: Landorus|par
-|move|p2a: Garchomp|Dragon Tail|p1a: Landorus
-|-damage|p1a: Landorus|39/100 par
-|drag|p1a: Zarude|Zarude|36/100
-|-damage|p1a: Zarude|24/100|[from] Stealth Rock
-|
-|upkeep
-|turn|21
-|j| Low Ladder Nooob
-|j| Terry B bestdlc
-|
-|t:|1633915484
-|move|p1a: Zarude|Darkest Lariat|p2a: Garchomp
-|-damage|p2a: Garchomp|0 fnt
-|-damage|p1a: Zarude|11/100|[from] ability: Rough Skin|[of] p2a: Garchomp
-|-damage|p1a: Zarude|0 fnt|[from] item: Rocky Helmet|[of] p2a: Garchomp
-|faint|p2a: Garchomp
-|faint|p1a: Zarude
-|
-|upkeep
-|
-|t:|1633915494
-|switch|p1a: Salamence|Salamence, M|64/100
-|switch|p2a: Prepare 4 trouble|Diggersby, F|100/100
-|-damage|p1a: Salamence|39/100|[from] Stealth Rock
-|-ability|p1a: Salamence|Intimidate|boost
-|-unboost|p2a: Prepare 4 trouble|atk|1
-|-damage|p2a: Prepare 4 trouble|94/100|[from] Stealth Rock
-|turn|22
-|
-|t:|1633915511
-|switch|p2a: Magnezone|Magnezone|35/100
-|-damage|p2a: Magnezone|29/100|[from] Stealth Rock
-|move|p1a: Salamence|Hurricane|p2a: Magnezone|[miss]
-|-miss|p1a: Salamence|p2a: Magnezone
-|
-|upkeep
-|turn|23
-|
-|t:|1633915519
-|switch|p1a: Heatran|Heatran, M|73/100
-|-damage|p1a: Heatran|60/100|[from] Stealth Rock
-|move|p2a: Magnezone|Flash Cannon|p1a: Heatran
-|-resisted|p1a: Heatran
-|-damage|p1a: Heatran|53/100
-|
-|-heal|p1a: Heatran|60/100|[from] item: Leftovers
-|upkeep
-|turn|24
-|
-|t:|1633915527
-|move|p2a: Magnezone|Flash Cannon|p1a: Heatran
-|-resisted|p1a: Heatran
-|-damage|p1a: Heatran|53/100
-|move|p1a: Heatran|Earth Power|p2a: Magnezone
-|-supereffective|p2a: Magnezone
-|-damage|p2a: Magnezone|0 fnt
-|faint|p2a: Magnezone
-|
-|-heal|p1a: Heatran|59/100|[from] item: Leftovers
-|upkeep
-|
-|t:|1633915535
-|switch|p2a: Prepare 4 trouble|Diggersby, F|94/100
-|-damage|p2a: Prepare 4 trouble|88/100|[from] Stealth Rock
-|turn|25
-|
-|t:|1633915543
-|switch|p1a: Tapu Fini|Tapu Fini|24/100
-|-damage|p1a: Tapu Fini|11/100|[from] Stealth Rock
-|-fieldstart|move: Misty Terrain|[from] ability: Misty Surge|[of] p1a: Tapu Fini
-|move|p2a: Prepare 4 trouble|Body Slam|p1a: Tapu Fini
-|-damage|p1a: Tapu Fini|0 fnt
-|faint|p1a: Tapu Fini
-|
-|upkeep
-|
-|t:|1633915550
-|switch|p1a: Scizor|Scizor, M|100/100
-|-damage|p1a: Scizor|88/100|[from] Stealth Rock
-|turn|26
-|
-|t:|1633915554
-|switch|p2a: Zapdos|Zapdos|56/100
-|move|p1a: Scizor|U-turn|p2a: Zapdos
-|-resisted|p2a: Zapdos
-|-damage|p2a: Zapdos|42/100
-|
-|t:|1633915558
-|switch|p1a: Heatran|Heatran, M|59/100|[from]move: U-turn
-|-damage|p1a: Heatran|47/100|[from] Stealth Rock
-|
-|-heal|p1a: Heatran|53/100|[from] item: Leftovers
-|upkeep
-|turn|27
-|
-|t:|1633915564
-|move|p2a: Zapdos|Roost|p2a: Zapdos
-|-heal|p2a: Zapdos|92/100
-|-singleturn|p2a: Zapdos|move: Roost
-|move|p1a: Heatran|Earth Power|p2a: Zapdos
-|-supereffective|p2a: Zapdos
-|-damage|p2a: Zapdos|42/100
-|-unboost|p2a: Zapdos|spd|1
-|
-|-heal|p1a: Heatran|59/100|[from] item: Leftovers
-|upkeep
-|turn|28
-|
-|t:|1633915575
-|move|p2a: Zapdos|Discharge|p1a: Heatran
-|-damage|p1a: Heatran|36/100
-|move|p1a: Heatran|Magma Storm|p2a: Zapdos|[miss]
-|-miss|p1a: Heatran|p2a: Zapdos
-|
-|-heal|p1a: Heatran|42/100|[from] item: Leftovers
-|upkeep
-|turn|29
-|
-|t:|1633915582
-|move|p2a: Zapdos|Discharge|p1a: Heatran
-|-damage|p1a: Heatran|20/100
-|move|p1a: Heatran|Magma Storm|p2a: Zapdos
-|-damage|p2a: Zapdos|0 fnt
-|faint|p2a: Zapdos
-|
-|-heal|p1a: Heatran|26/100|[from] item: Leftovers
-|-fieldend|Misty Terrain
-|upkeep
-|
-|t:|1633915591
-|switch|p2a: Prepare 4 trouble|Diggersby, F|88/100
-|-damage|p2a: Prepare 4 trouble|82/100|[from] Stealth Rock
-|turn|30
-|
-|t:|1633915595
-|move|p2a: Prepare 4 trouble|Body Slam|p1a: Heatran
-|-resisted|p1a: Heatran
-|-damage|p1a: Heatran|0 fnt
-|faint|p1a: Heatran
-|
-|upkeep
-|
-|t:|1633915598
-|switch|p1a: Scizor|Scizor, M|88/100
-|-damage|p1a: Scizor|76/100|[from] Stealth Rock
-|turn|31
-|
-|t:|1633915604
-|switch|p2a: Make it double|Azumarill, M|10/100
-|-damage|p2a: Make it double|0 fnt|[from] Stealth Rock
-|faint|p2a: Make it double
-|move|p1a: Scizor|Swords Dance|p1a: Scizor
-|-boost|p1a: Scizor|atk|2
-|
-|-heal|p1a: Scizor|82/100|[from] item: Leftovers
-|upkeep
-|
-|t:|1633915611
-|switch|p2a: Prepare 4 trouble|Diggersby, F|82/100
-|-damage|p2a: Prepare 4 trouble|76/100|[from] Stealth Rock
-|turn|32
-|
-|t:|1633915616
-|move|p1a: Scizor|Bullet Punch|p2a: Prepare 4 trouble
-|-damage|p2a: Prepare 4 trouble|0 fnt
-|faint|p2a: Prepare 4 trouble
-|
-|-heal|p1a: Scizor|88/100|[from] item: Leftovers
-|upkeep
-|
-|t:|1633915621
-|switch|p2a: Fat F*ck Ferro|Ferrothorn, F|83/100
-|-damage|p2a: Fat F*ck Ferro|76/100|[from] Stealth Rock
-|turn|33
-|
-|t:|1633915634
-|move|p1a: Scizor|U-turn|p2a: Fat F*ck Ferro
-|-crit|p2a: Fat F*ck Ferro
-|-damage|p2a: Fat F*ck Ferro|0 fnt
-|-damage|p1a: Scizor|76/100|[from] ability: Iron Barbs|[of] p2a: Fat F*ck Ferro
-|faint|p2a: Fat F*ck Ferro
-|
-|win|VirginJimmy99
-|raw|VirginJimmy99's rating: 1732 &rarr; <strong>1760</strong><br />(+28 for winning)
-|raw|cows123p's rating: 1880 &rarr; <strong>1852</strong><br />(-28 for losing)
-|l|☆cows123p
-|c|☆VirginJimmy99|gg
-|l| Low Ladder Nooob
+#DEBUG="switch" python gatherData/DataCollection.py
+#DEBUG="events" python gatherData/DataCollection.py
+#DEBUG="init_team" python gatherData/DataCollection.py
+python gatherData/DataCollection.py
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 100.0/100 HP]
+Player 2 Team
+---------
+Curently out: Buzzwole
+[Zapdos (Zapdos): 100.0/100 HP, Heatran (Heatran): 100.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 100.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 100.0/100 HP]
+Player 1 Decision: [(Decision: True, Volt Switch), (Decision: False, Landorus)]
+Player 2 Decision: [(Decision: False, Blissey)]
+
+Player 1 Team
+---------
+Curently out: Landorus
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 100.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 100.0/100 HP, Heatran (Heatran): 100.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 100.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 83.0/100 HP]
+Player 1 Decision: [(Decision: True, Knock Off)]
+Player 2 Decision: [(Decision: False, Heatran)]
+
+Player 1 Team
+---------
+Curently out: Landorus
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 100.0/100 HP]
+Player 2 Team
+---------
+Curently out: Heatran
+[Zapdos (Zapdos): 100.0/100 HP, Heatran (Heatran): 67.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 100.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 83.0/100 HP]
+Player 1 Decision: [(Decision: True, Stealth Rock)]
+Player 2 Decision: [(Decision: False, Zapdos)]
+
+Player 1 Team
+---------
+Curently out: Landorus
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 100.0/100 HP]
+Player 2 Team
+---------
+Curently out: Zapdos
+[Zapdos (Zapdos): 100.0/100 HP, Heatran (Heatran): 67.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 100.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 83.0/100 HP]
+Player 1 Decision: [(Decision: True, Explosion), (Decision: False, Latias)]
+Player 2 Decision: [(Decision: True, Toxic), (Decision: False, Heatran)]
+
+Player 1 Team
+---------
+Curently out: Latias
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 100.0/100 HP]
+Player 2 Team
+---------
+Curently out: Heatran
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 54.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 100.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 83.0/100 HP]
+Player 1 Decision: [(Decision: True, Earthquake)]
+Player 2 Decision: [(Decision: False, Dragapult)]
+
+Player 1 Team
+---------
+Curently out: Latias
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 100.0/100 HP]
+Player 2 Team
+---------
+Curently out: Dragapult
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 88.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 83.0/100 HP]
+Player 1 Decision: [(Decision: True, Earthquake)]
+Player 2 Decision: [(Decision: True, Shadow Ball)]
+
+Player 1 Team
+---------
+Curently out: Latias
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 7.000000000000001/100 HP]
+Player 2 Team
+---------
+Curently out: Dragapult
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 83.0/100 HP]
+Player 1 Decision: [(Decision: False, Regieleki)]
+Player 2 Decision: [(Decision: True, Shadow Ball)]
+
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Dragapult
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 83.0/100 HP]
+Player 1 Decision: [(Decision: True, Volt Switch), (Decision: False, Skarmory)]
+Player 2 Decision: [(Decision: False, Blissey)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 66.0/100 HP]
+Player 1 Decision: [(Decision: True, Spikes)]
+Player 2 Decision: [(Decision: True, Thunder Wave)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 66.0/100 HP]
+Player 1 Decision: [(Decision: True, Spikes)]
+Player 2 Decision: [(Decision: True, Thunder Wave)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 66.0/100 HP]
+Player 1 Decision: [(Decision: True, Spikes)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 100.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 66.0/100 HP]
+Player 1 Decision: [(Decision: True, Body Press)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 70.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 28.000000000000004/100 HP]
+Player 1 Decision: [(Decision: True, Body Press)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 70.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 20.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 70.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 100.0/100 HP, Blissey (Blissey): 20.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: False, Buzzwole)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 70.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Buzzwole
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 63.0/100 HP, Blissey (Blissey): 20.0/100 HP]
+Player 1 Decision: [(Decision: True, Toxic)]
+Player 2 Decision: [(Decision: True, Thunder Punch)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 50.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Buzzwole
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 40.0/100 HP, Blissey (Blissey): 20.0/100 HP]
+Player 1 Decision: [(Decision: False, Gastrodon)]
+Player 2 Decision: [(Decision: True, Thunder Punch)]
+
+Player 1 Team
+---------
+Curently out: Gastrodon
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 50.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Buzzwole
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 20.0/100 HP]
+Player 1 Decision: [(Decision: True, Scald)]
+Player 2 Decision: [(Decision: False, Blissey)]
+
+Player 1 Team
+---------
+Curently out: Gastrodon
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 50.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 54.0/100 HP]
+Player 1 Decision: [(Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 50.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 94.0/100 HP]
+Player 1 Decision: [(Decision: True, Future Sight)]
+Player 2 Decision: [(Decision: True, Thunder Wave)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 50.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 88.0/100 HP]
+Player 1 Decision: [(Decision: False, Skarmory)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 100.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 65.0/100 HP]
+Player 1 Decision: [(Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 75.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 43.0/100 HP]
+Player 1 Decision: [(Decision: True, Future Sight)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 75.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 86.0/100 HP]
+Player 1 Decision: [(Decision: True, Sludge Bomb)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 50.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 69.0/100 HP]
+Player 1 Decision: [(Decision: False, Gastrodon)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Gastrodon
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 50.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 78.0/100 HP]
+Player 1 Decision: [(Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 56.99999999999999/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 72.0/100 HP]
+Player 1 Decision: [(Decision: False, Gastrodon)]
+Player 2 Decision: [(Decision: True, Thunder Wave)]
+
+Player 1 Team
+---------
+Curently out: Gastrodon
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 56.99999999999999/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 100.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 66.0/100 HP]
+Player 1 Decision: [(Decision: True, Earth Power)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Gastrodon
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 56.99999999999999/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 77.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 48.0/100 HP]
+Player 1 Decision: [(Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Thunder Wave)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 91.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 77.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 42.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 91.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 77.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 86.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 65.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 77.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 80.0/100 HP]
+Player 1 Decision: [(Decision: True, Future Sight)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 40.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 77.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 100.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 73.0/100 HP]
+Player 1 Decision: [(Decision: False, Gastrodon)]
+Player 2 Decision: [(Decision: False, Ferrothorn)]
+
+Player 1 Team
+---------
+Curently out: Gastrodon
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 40.0/100 HP, Skarmory (Skarmory): 20.0/100 HP, Gastrodon (Gastrodon): 83.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Ferrothorn
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 69.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 73.0/100 HP]
+Player 1 Decision: [(Decision: False, Skarmory)]
+Player 2 Decision: [(Decision: True, Knock Off)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 40.0/100 HP, Skarmory (Skarmory): 7.000000000000001/100 HP, Gastrodon (Gastrodon): 83.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Ferrothorn
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 40.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 73.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Knock Off)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 40.0/100 HP, Skarmory (Skarmory): 48.0/100 HP, Gastrodon (Gastrodon): 83.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Ferrothorn
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 40.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 73.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Leech Seed)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 40.0/100 HP, Skarmory (Skarmory): 86.0/100 HP, Gastrodon (Gastrodon): 83.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Ferrothorn
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 40.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 73.0/100 HP]
+Player 1 Decision: [(Decision: False, Gastrodon)]
+Player 2 Decision: [(Decision: True, Spikes)]
+
+Player 1 Team
+---------
+Curently out: Gastrodon
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 40.0/100 HP, Skarmory (Skarmory): 86.0/100 HP, Gastrodon (Gastrodon): 89.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Ferrothorn
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 40.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 73.0/100 HP]
+Player 1 Decision: [(Decision: True, Scald), (Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Power Whip)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 86.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Ferrothorn
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 66.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 73.0/100 HP]
+Player 1 Decision: [(Decision: True, Flamethrower)]
+Player 2 Decision: [(Decision: False, Blissey)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 86.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 66.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 65.0/100 HP]
+Player 1 Decision: [(Decision: False, Skarmory)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 56.00000000000001/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 66.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 65.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 26.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 66.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 65.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 46.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 66.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 65.0/100 HP]
+Player 1 Decision: [(Decision: True, Body Press)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 46.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 66.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 41.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 46.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 66.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 41.0/100 HP]
+Player 1 Decision: [(Decision: True, Body Press)]
+Player 2 Decision: [(Decision: False, Ferrothorn), (Decision: False, Blissey)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 84.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 91.0/100 HP]
+Player 1 Decision: [(Decision: True, Body Press)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 54.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 34.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 54.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 34.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 24.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 34.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 44.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 34.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 14.000000000000002/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 34.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 34.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 34.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 54.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 34.0/100 HP]
+Player 1 Decision: [(Decision: True, Body Press)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 70.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 32.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 70.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 32.0/100 HP]
+Player 1 Decision: [(Decision: True, Roost)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 40.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 32.0/100 HP]
+Player 1 Decision: [(Decision: True, Toxic)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 61.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 75.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Skarmory
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 100.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 63.0/100 HP]
+Player 1 Decision: [(Decision: False, Regieleki)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 69.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 36.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 45.0/100 HP]
+Player 1 Decision: [(Decision: True, Rapid Spin)]
+Player 2 Decision: [(Decision: False, Dragapult), (Decision: False, Blissey)]
+
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 69.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 45.0/100 HP]
+Player 1 Decision: [(Decision: True, Electro Ball)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 69.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 16.0/100 HP]
+Player 1 Decision: [(Decision: True, Electro Ball)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 69.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 36.0/100 HP]
+Player 1 Decision: [(Decision: True, Rapid Spin)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 38.0/100 HP, Slowking (Slowking): 61.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 78.0/100 HP]
+Player 1 Decision: [(Decision: True, Volt Switch), (Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 38.0/100 HP, Slowking (Slowking): 69.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 62.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 38.0/100 HP, Slowking (Slowking): 43.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 62.0/100 HP]
+Player 1 Decision: [(Decision: True, Sludge Bomb)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 38.0/100 HP, Slowking (Slowking): 18.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 50.0/100 HP]
+Player 1 Decision: [(Decision: False, Regieleki)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Regieleki
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 7.000000000000001/100 HP, Slowking (Slowking): 18.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 50.0/100 HP]
+Player 1 Decision: [(Decision: True, Volt Switch), (Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 7.000000000000001/100 HP, Slowking (Slowking): 51.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 32.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 7.000000000000001/100 HP, Slowking (Slowking): 26.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 32.0/100 HP]
+Player 1 Decision: [(Decision: False, Regieleki), (Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 0.0/100 HP, Slowking (Slowking): 59.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 32.0/100 HP]
+Player 1 Decision: [(Decision: True, Sludge Bomb)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 0.0/100 HP, Slowking (Slowking): 34.0/100 HP, Skarmory (Skarmory): 31.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 57.99999999999999/100 HP]
+Player 1 Decision: [(Decision: False, Skarmory), (Decision: False, Slowking)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 0.0/100 HP, Slowking (Slowking): 67.0/100 HP, Skarmory (Skarmory): 0.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 28.000000000000004/100 HP, Blissey (Blissey): 45.0/100 HP]
+Player 1 Decision: [(Decision: True, Future Sight)]
+Player 2 Decision: [(Decision: False, Buzzwole), (Decision: False, Blissey)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 0.0/100 HP, Slowking (Slowking): 67.0/100 HP, Skarmory (Skarmory): 0.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 0.0/100 HP, Blissey (Blissey): 45.0/100 HP]
+Player 1 Decision: [(Decision: True, Sludge Bomb)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 0.0/100 HP, Slowking (Slowking): 67.0/100 HP, Skarmory (Skarmory): 0.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 0.0/100 HP, Blissey (Blissey): 63.0/100 HP]
+Player 1 Decision: [(Decision: True, Future Sight)]
+Player 2 Decision: [(Decision: True, Soft-Boiled)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 0.0/100 HP, Slowking (Slowking): 67.0/100 HP, Skarmory (Skarmory): 0.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 0.0/100 HP, Blissey (Blissey): 71.0/100 HP]
+Player 1 Decision: [(Decision: True, Future Sight)]
+Player 2 Decision: [(Decision: True, Seismic Toss)]
+
+Player 1 Team
+---------
+Curently out: Slowking
+[Landorus (Landorus): 100.0/100 HP, Regieleki (Regieleki): 0.0/100 HP, Slowking (Slowking): 41.0/100 HP, Skarmory (Skarmory): 0.0/100 HP, Gastrodon (Gastrodon): 0.0/100 HP, Latias (Latias): 0.0/100 HP]
+Player 2 Team
+---------
+Curently out: Blissey
+[Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 0.0/100 HP, Blissey (Blissey): 59.0/100 HP]
+Player 1 Decision: []
+Player 2 Decision: []
 
