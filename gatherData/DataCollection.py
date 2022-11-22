@@ -133,19 +133,13 @@ class DataPoint:
             elif event[0] == 'drag':
                 pkmName, nickname, hpratio = event[2].split(',')[0], event[1].split(': ')[1], event[3].split('/')
                 self.new_teams[player].switch(pkmName, nickname, hpratio)
+            elif event[0] == 'faint':
+                nickname, hpratio = event[1].split(': ')[1], ['0', '100']
+                self.new_teams[player].calculate_damage(nickname, hpratio)
 
         return decision
 
 # ------ HELPER FUNCTIONS ------
-        
-# checks a single line from the log, decides if it is relevant
-def line_is_relevant(line):
-    if (line.find("|move") > -1 or 
-        line.find("|switch") > -1 or 
-        line.find("|-damage") > -1 or
-        line.find("|faint") > -1):
-        return True
-    return False
 
 def shouldSkip(turns):
     if len(turns) < 2:
@@ -183,6 +177,3 @@ for battle in battles:
     for turn in turns[1:]:
         datapoints.append(DataPoint(team1, team2, turn))
         team1, team2 = datapoints[-1].new_teams['p1'], datapoints[-1].new_teams['p2']
-        print(datapoints[-1])
-
-    exit()
