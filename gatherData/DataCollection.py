@@ -1,15 +1,26 @@
 import copy
-import json
+import json import os
+from debugprint import Debug
+
 
 # -------- OBJECT CLASSES --------
+
+status = set(['brn', 'par', 'slp', 'frz', 'psn', 'tox'])
+
+debug_switch = Debug('switch')
+debug_init_team = Debug('init_team')
+debug_events = Debug('events')
 
 class Team:
     # The team is a list of Pokemon objects
     # where the objects are created through looking
     # at the log file.
     def __init__(self, log, team_name):
-        pkms = [i.split('|')[-2].split(',')[0] for i in log if i.startswith('|poke|' + team_name)]
+        pkms = [i.split('|')[3].split(',')[0] for i in log if i.startswith('|poke|' + team_name)]
+        pkms = [i.split('-')[0] for i in pkms]
         self.roster = {pkm: Pokemon(pkm) for pkm in pkms}
+
+        debug_init_team(self.roster, 'roster')
 
         nickname, pkmName = [i.split('|')[2:4] for i in log if i.startswith('|switch|' + team_name)][0]
         nickname, pkmName = nickname.split(': ')[1], pkmName.split(',')[0]
@@ -19,14 +30,40 @@ class Team:
     # When a Pokemon switches out, this function can be called to update
     # team's current pokemon, as well as updating their nickname since the
     # nicknames are only revealed when they switch in
-    def switch(self, pkmName, nickname):
+    def switch(self, pkmName, nickname, hpratio = None):
+        debug_switch(pkmName, 'name')
+        debug_switch(nickname, 'nickname')
+        debug_switch(self.roster, 'roster')
+
+        if len(pkmName.split('-')) > 1:
+            pkmName = pkmName.split('-')[0]
+
+        if len(nickname.split('-')) > 1:
+            nickname = nickname.split('-')[0]
+
         if nickname not in self.roster and pkmName in self.roster:
             self.roster[nickname] = self.roster.pop(pkmName)
             self.roster[nickname].nickname = nickname
 
         self.currPkm = self.roster[nickname].name
+        self.calculate_damage(nickname, hpratio)
 
     def calculate_damage(self, target, hpratio):
+        if hpratio is None:
+            return
+
+        if len(target.split('-')) > 1:
+            target = target.split('-')[0]
+
+        if len(hpratio) < 2:
+            hpratio = ['0', '100']
+
+        if hpratio[-1][-3:] in status:
+            hpratio[-1] = hpratio[-1][:-4]
+
+        if hpratio[-1][-1] == 'g':
+            hpratio[-1] = hpratio[-1][:-1]
+
         self.roster[target].hp = int(hpratio[0]) / int(hpratio[1])
 
     def __str__(self):
@@ -74,15 +111,19 @@ class DataPoint:
 
         decision = None
         for event in events:
+            debug_events(event)
             if event[0] == 'move':
                 decision = Decision(True, event[2])
             elif event[0] == 'switch':
-                pkmName, nickname = event[2].split(',')[0], event[1].split(': ')[1]
+                pkmName, nickname, hpratio = event[2].split(',')[0], event[1].split(': ')[1], event[3].split('/')
                 decision = Decision(False, nickname)
-                self.teams[player].switch(pkmName, nickname)
+                self.teams[player].switch(pkmName, nickname, hpratio)
             elif event[0] == '-damage':
                 nickname, hpratio = event[1].split(': ')[1], event[2].split(' ')[0].split('/')
-                self.teams[player].calculate_damage(nickname, hpratio if len(hpratio) == 2 else [0, 1])
+                self.teams[player].calculate_damage(nickname, hpratio)
+            elif event[0] == 'drag':
+                pkmName, nickname, hpratio = event[2].split(',')[0], event[1].split(': ')[1], event[3].split('/')
+                self.teams[player].switch(pkmName, nickname, hpratio)
 
         return decision
 
@@ -97,20 +138,39 @@ def line_is_relevant(line):
         return True
     return False
 
+def shouldSkip(turns):
+    if len(turns) < 2:
+        return True
+
+    if '|gametype|doubles' in turns[0]:
+        return True
+
+    rules = [i.split('|')[2].split(':')[0] for i in turns[0] if i.startswith('|rule|')]
+    
+    if 'Species Clause' not in rules:
+        return True
+
+    return False
+
 # --------- MAIN DATA COLLECTION PROGRAM --------- 
-#with open ('data/battle_log/gen8ou-1675763469.json') as f:
-with open ('data/example_data.json') as f:
-    data = json.load(f)
+battles = os.listdir('data/battle_log')
+for battle in battles:
+    with open (f'data/battle_log/{battle}') as f:
+        data = json.load(f)
 
-log_data = data["log"]
-turns = [i.split('\n') for i in log_data.split("|turn|")]
+    log_data = data["log"]
+    turns = [i.split('\n') for i in log_data.split("|turn|")]
 
-# create initial state
-team1 = Team(turns[0], "p1")
-team2 = Team(turns[0], "p2")
+    if shouldSkip(turns):
+        continue
 
-datapoints = []
-for turn in turns[1:]:
-    datapoints.append(DataPoint(team1, team2, turn))
-    team1, team2 = datapoints[-1].teams['p1'], datapoints[-1].teams['p2']
-    print(datapoints[-1])
+    team1 = Team(turns[0], "p1")
+    team2 = Team(turns[0], "p2")
+
+    if 'Zoroark' in team1.roster or 'Zoroark' in team2.roster:
+        continue
+
+    datapoints = []
+    for turn in turns[1:]:
+        datapoints.append(DataPoint(team1, team2, turn))
+        team1, team2 = datapoints[-1].teams['p1'], datapoints[-1].teams['p2']
