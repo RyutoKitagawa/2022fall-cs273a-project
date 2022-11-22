@@ -2,7 +2,7 @@ import tensorflow as tf
 
 class PokemonPredictorNeuralNetwork:
     def __init__(self, pokemon, moves):
-        # Each tema input is an array of 978 numbers
+        # Each team input is an array of 978 numbers
         # Each number represents the amount of health a pokemon has
         # A pokemon with 0 health is either not on the team or fainted
         # In either case, the pokemon is inconsequential to the battle
