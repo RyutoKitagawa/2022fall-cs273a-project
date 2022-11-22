@@ -1,7 +1,5 @@
-all: neuralNetwork
-
-test:
-	python gatherData/test.py
+DataCollection:
+	python gatherData/DataCollection.py
 
 neuralNetwork:
 	python learningModel/neuralNetwork.py

@@ -1,4 +1,5 @@
 import copy
+import json
 
 # -------- OBJECT CLASSES --------
 
@@ -11,12 +12,21 @@ class Pokemon:
         self.ability = None
         self.item = None
 
+    def __str__(self):
+        return f'{self.name} ({self.nickname}), {self.hp}/{self.max_hp} HP'
+
+    def __repr__(self):
+        return str(self)
+
 class GameState:
     # records a game state 
     # cur: current mon in play, team: remaining team list
     def __init__(self, cur1, cur2, team1, team2):
         self.cur1, self.cur2 = cur1, cur2
         self.team1, self.team2 = team1, team2
+
+    def __str__(self):
+        return f"Current Pokemon: {self.cur1} vs {self.cur2}\nteam1: {self.team1}\nteam2: {self.team2}"
         
 class Decision:
     # records a decision made by a player
@@ -25,12 +35,17 @@ class Decision:
     def __init__(self, mos, move_data):
         self.mos = mos
         self.move_data = move_data
+
+    def __str__(self):
+        return f"Decision: {self.mos}, {self.move_data}"
         
 class DataPoint:
     # records a game state and a decision a player made
     def __init__(self, state, decision):
         self.state, self.decision = state, decision
-        
+
+    def __str__(self):
+        return str(self.state) + "\n" + str(self.decision)
 
 # ------ HELPER FUNCTIONS ------
         
@@ -114,7 +129,6 @@ def parse_from_switch_data(log):
         monname = monname[:monname.find("|")]
     return player, monname, nickname
     
-
 # parameters: 
 #   str log: remaining log (will look at first turn in that log)
 #   GameState state: current game state object
@@ -176,6 +190,9 @@ def parse_one_turn(log, state):
 
 
 # --------- MAIN DATA COLLECTION PROGRAM --------- 
+#with open ('data/battle_log/gen8ou-1675763469.json') as f:
+with open ('data/example_data.json') as f:
+    data = json.load(f)
 
 log_data = data["log"]
 log = log_data.split('\n')
@@ -186,9 +203,9 @@ team2 = get_mons_on_team(log_data, "p2")
 
 log = remove_data_until(log, "|start")
 log = log[1:]
-player1, nickname1, monname1 = parse_from_switch_data(log)
+player1, monname1, nickname1 = parse_from_switch_data(log)
 log = log[1:]
-player2, nickname2, monname2 = parse_from_switch_data(log)
+player2, monname2, nickname2 = parse_from_switch_data(log)
 
 state = GameState("", "", team1, team2)
 state = update_nickname(state, 1, monname1, nickname1)
@@ -200,5 +217,3 @@ while len(log) > 0:
     log, state, new_data = parse_one_turn(log, state)
     for d in new_data:
         data_pts.append(d)
-        
-print(data_pts)
