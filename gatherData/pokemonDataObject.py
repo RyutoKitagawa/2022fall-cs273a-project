@@ -2,7 +2,7 @@ class Pokemon:
     def __init__(self, name, max_hp = 100):
         self.name, self.nickname = name, name
         self.max_hp, self.hp = max_hp, max_hp
-        self.mega_evolve = False, self.dynamax = False
+        self.mega_evolve, self.dynamax = False, False
         self.type = None
         self.status = None
         self.ability = None
