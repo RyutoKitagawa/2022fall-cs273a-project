@@ -1,8 +1,14 @@
 DataCollection:
-	#DEBUG="switch" python gatherData/DataCollection.py
-	#DEBUG="events" python gatherData/DataCollection.py
-	#DEBUG="init_team" python gatherData/DataCollection.py
 	python gatherData/DataCollection.py
+
+e:
+	DEBUG="events" python gatherData/DataCollection.py
+
+s:
+	DEBUG="switch" python gatherData/DataCollection.py
+
+i:
+	DEBUG="init_team" python gatherData/DataCollection.py
 
 neuralNetwork:
 	python learningModel/neuralNetwork.py
