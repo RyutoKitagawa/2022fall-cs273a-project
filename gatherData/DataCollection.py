@@ -1,5 +1,6 @@
 import copy
-import json import os
+import json
+import os
 from debugprint import Debug
 
 
@@ -94,36 +95,44 @@ class Decision:
         self.move_data = move_data
 
     def __str__(self):
-        return f"Decision: {self.mos}, {self.move_data}"
+        return f"(Decision: {self.mos}, {self.move_data})"
+
+    def __repr__(self):
+        return str(self)
         
 class DataPoint:
     # records a game state and a decision a player made
     def __init__(self, team1, team2, log):
         self.teams = {'p1': copy.deepcopy(team1), 'p2': copy.deepcopy(team2)}
+        self.new_teams = {'p1': copy.deepcopy(team1), 'p2': copy.deepcopy(team2)}
+
         self.p1_decision = self.process_turn(log, 'p1')
         self.p2_decision = self.process_turn(log, 'p2')
 
     def __str__(self):
-        return str(self.teams['p1']) + '\n\n' + str(self.teams['p2']) + '\nPlayer 1: ' + str(self.p1_decision) + '\nPlayer 2: ' + str(self.p2_decision)
+        return 'Player 1 Team\n---------\n' + str(self.teams['p1']) + '\nPlayer 2 Team\n---------\n' + str(self.teams['p2']) + '\nPlayer 1 Decision: ' + str(self.p1_decision) + '\nPlayer 2 Decision: ' + str(self.p2_decision) + '\n'
+
+    def __repr__(self):
+        return str(self)
 
     def process_turn(self, log, player):
         events = [i.split('|')[1:] for i in log if len(i.split('|')) > 2 and i.split('|')[2].startswith(player)]
 
-        decision = None
+        decision = []
         for event in events:
             debug_events(event)
             if event[0] == 'move':
-                decision = Decision(True, event[2])
+                decision.append(Decision(True, event[2]))
             elif event[0] == 'switch':
                 pkmName, nickname, hpratio = event[2].split(',')[0], event[1].split(': ')[1], event[3].split('/')
-                decision = Decision(False, nickname)
-                self.teams[player].switch(pkmName, nickname, hpratio)
+                decision.append(Decision(False, nickname))
+                self.new_teams[player].switch(pkmName, nickname, hpratio)
             elif event[0] == '-damage':
                 nickname, hpratio = event[1].split(': ')[1], event[2].split(' ')[0].split('/')
-                self.teams[player].calculate_damage(nickname, hpratio)
+                self.new_teams[player].calculate_damage(nickname, hpratio)
             elif event[0] == 'drag':
                 pkmName, nickname, hpratio = event[2].split(',')[0], event[1].split(': ')[1], event[3].split('/')
-                self.teams[player].switch(pkmName, nickname, hpratio)
+                self.new_teams[player].switch(pkmName, nickname, hpratio)
 
         return decision
 
@@ -173,4 +182,7 @@ for battle in battles:
     datapoints = []
     for turn in turns[1:]:
         datapoints.append(DataPoint(team1, team2, turn))
-        team1, team2 = datapoints[-1].teams['p1'], datapoints[-1].teams['p2']
+        team1, team2 = datapoints[-1].new_teams['p1'], datapoints[-1].new_teams['p2']
+        print(datapoints[-1])
+
+    exit()
