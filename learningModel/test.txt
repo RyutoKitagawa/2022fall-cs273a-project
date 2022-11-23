@@ -1,0 +1,46 @@
+Alakazam: 0
+Piplup: 0
+...
+Pikachu: 1
+Pichu: 0
+Electrode: 1
+
+HP of each Pokemon
+
+Which Pokemon is In Play
+
+numPkm : 0, 0, ..., 100, 0, 100
+OnField: 0, 0, ..., 1,   0, 0
+
+First
+0
+0
+...
+100
+0
+100
+
+Second
+0
+0
+...
+100
+0
+100
+
+
+Third
+0
+0
+...
+1
+0
+0
+
+Fourth
+0
+0
+...
+1
+0
+0

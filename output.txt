@@ -1,6 +1,3 @@
-#DEBUG="switch" python gatherData/DataCollection.py
-#DEBUG="events" python gatherData/DataCollection.py
-#DEBUG="init_team" python gatherData/DataCollection.py
 python gatherData/DataCollection.py
 Player 1 Team
 ---------
@@ -837,4 +834,3 @@ Curently out: Blissey
 [Zapdos (Zapdos): 0.0/100 HP, Heatran (Heatran): 0.0/100 HP, Ferrothorn (Ferrothorn): 0.0/100 HP, Dragapult (Dragapult): 0.0/100 HP, Buzzwole (Buzzwole): 0.0/100 HP, Blissey (Blissey): 59.0/100 HP]
 Player 1 Decision: []
 Player 2 Decision: []
-

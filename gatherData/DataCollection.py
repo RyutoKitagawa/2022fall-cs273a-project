@@ -70,6 +70,14 @@ class Team:
     def __str__(self):
         return 'Curently out: ' + str(self.currPkm) + '\n' + str([pkm for pkm in self.roster.values()])
 
+    def search(self, name):
+        team = [i for i in self.roster.values()]
+        for pkm in team:
+            if name in pkm.name:
+                return pkm
+
+        return None
+
 class Pokemon:
     # We calculate the hp through percentages
     def __init__(self, name):
@@ -156,6 +164,11 @@ def shouldSkip(turns):
     return False
 
 # --------- MAIN DATA COLLECTION PROGRAM --------- 
+with open(f'data/unique_pokemon.csv', 'r') as f:
+    pkms = f.read().split(',')
+with open(f'data/moves.csv', 'r') as f:
+    moves = f.read().split(',')
+
 battles = os.listdir('data/battle_log')
 for battle in battles:
     with open (f'data/battle_log/{battle}') as f:
@@ -177,3 +190,45 @@ for battle in battles:
     for turn in turns[1:]:
         datapoints.append(DataPoint(team1, team2, turn))
         team1, team2 = datapoints[-1].new_teams['p1'], datapoints[-1].new_teams['p2']
+
+    with open(f'data/datapoints.csv', 'w') as f:
+        for datapoint in datapoints:
+            # Output Team 1
+            for pkm_name in pkms:
+                f.write(f'{pkm.hp},' if (pkm := datapoint.teams['p1'].search(pkm_name)) else '0,')
+            f.write('\n')
+
+            # Output Team 2
+            for pkm_name in pkms:
+                f.write(f'{pkm.hp},' if (pkm := datapoint.teams['p2'].search(pkm_name)) else '0,')
+            f.write('\n')
+
+            # Output Team 1 Curent Pokemon
+            for pkm_name in pkms:
+                f.write('1,' if (datapoint.teams['p1'].currPkm == pkm_name) else '0,')
+            f.write('\n')
+
+            # Output Team 2 Curent Pokemon
+            for pkm_name in pkms:
+                f.write('1,' if (datapoint.teams['p2'].currPkm == pkm_name) else '0,')
+            f.write('\n')
+
+            # Output Team 1 Moves
+            for move_name in moves:
+                f.write('1,' if len(datapoint.p1_decision) > 0 and datapoint.p1_decision[0].move_data == move_name else '0,')
+            f.write('\n')
+
+            # Output Team 1 Pokemon switch
+            for pkm_name in pkms:
+                f.write('1,' if len(datapoint.p1_decision) > 0 and datapoint.p1_decision[0].move_data == pkm_name else '0,')
+            f.write('\n')
+
+            # Output Team 2 Moves
+            for move_name in moves:
+                f.write('1,' if len(datapoint.p2_decision) > 0 and datapoint.p2_decision[0].move_data == move_name else '0,')
+            f.write('\n')
+
+            # Output Team 2 Pokemon switch
+            for pkm_name in pkms:
+                f.write('1,' if len(datapoint.p2_decision) > 0 and datapoint.p2_decision[0].move_data == pkm_name else '0,')
+            f.write('\n')
