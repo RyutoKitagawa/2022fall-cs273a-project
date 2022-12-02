@@ -2,6 +2,7 @@ import copy
 import json
 import os
 from debugprint import Debug
+from tqdm import tqdm
 
 
 # -------- OBJECT CLASSES --------
@@ -133,7 +134,7 @@ class DataPoint:
                 decision.append(Decision(True, event[2]))
             elif event[0] == 'switch':
                 pkmName, nickname, hpratio = event[2].split(',')[0], event[1].split(': ')[1], event[3].split('/')
-                decision.append(Decision(False, nickname))
+                decision.append(Decision(False, pkmName.split('-')[0]))
                 self.new_teams[player].switch(pkmName, nickname, hpratio)
             elif event[0] == '-damage':
                 nickname, hpratio = event[1].split(': ')[1], event[2].split(' ')[0].split('/')
@@ -164,13 +165,13 @@ def shouldSkip(turns):
     return False
 
 # --------- MAIN DATA COLLECTION PROGRAM --------- 
-with open(f'data/unique_pokemon.csv', 'r') as f:
-    pkms = f.read().split(',')
-with open(f'data/moves.csv', 'r') as f:
-    moves = f.read().split(',')
-
 battles = os.listdir('data/battle_log')
-for battle in battles:
+datapoints = []
+
+pkms, moves = set(), set()
+
+print('Collecting data...')
+for battle in tqdm(battles):
     with open (f'data/battle_log/{battle}') as f:
         data = json.load(f)
 
@@ -186,49 +187,51 @@ for battle in battles:
     if 'Zoroark' in team1.roster or 'Zoroark' in team2.roster:
         continue
 
-    datapoints = []
     for turn in turns[1:]:
         datapoints.append(DataPoint(team1, team2, turn))
         team1, team2 = datapoints[-1].new_teams['p1'], datapoints[-1].new_teams['p2']
 
-    with open(f'data/datapoints.csv', 'w') as f:
-        for datapoint in datapoints:
-            # Output Team 1
-            for pkm_name in pkms:
-                f.write(f'{pkm.hp},' if (pkm := datapoint.teams['p1'].search(pkm_name)) else '0,')
-            f.write('\n')
+        for pkm in team1.roster.values():
+            pkms.add(pkm.name)
 
-            # Output Team 2
-            for pkm_name in pkms:
-                f.write(f'{pkm.hp},' if (pkm := datapoint.teams['p2'].search(pkm_name)) else '0,')
-            f.write('\n')
+        for pkm in team2.roster.values():
+            pkms.add(pkm.name)
 
-            # Output Team 1 Curent Pokemon
-            for pkm_name in pkms:
-                f.write('1,' if (datapoint.teams['p1'].currPkm == pkm_name) else '0,')
-            f.write('\n')
+        for decision in datapoints[-1].p1_decision:
+            if decision.mos:
+                moves.add(decision.move_data)
 
-            # Output Team 2 Curent Pokemon
-            for pkm_name in pkms:
-                f.write('1,' if (datapoint.teams['p2'].currPkm == pkm_name) else '0,')
-            f.write('\n')
+        for decision in datapoints[-1].p2_decision:
+            if decision.mos:
+                moves.add(decision.move_data)
 
-            # Output Team 1 Moves
-            for move_name in moves:
-                f.write('1,' if len(datapoint.p1_decision) > 0 and datapoint.p1_decision[0].move_data == move_name else '0,')
-            f.write('\n')
+pkms, moves = list(pkms), list(moves)
+key = {**{name: i for i, name in enumerate(pkms)}, **{name: i for i, name in enumerate(moves)}}
 
-            # Output Team 1 Pokemon switch
-            for pkm_name in pkms:
-                f.write('1,' if len(datapoint.p1_decision) > 0 and datapoint.p1_decision[0].move_data == pkm_name else '0,')
-            f.write('\n')
+print('Write pokemon data to file...')
+with open('data/unique_pokemon.csv', 'w') as f:
+    f.write(','.join(pkms))
 
-            # Output Team 2 Moves
-            for move_name in moves:
-                f.write('1,' if len(datapoint.p2_decision) > 0 and datapoint.p2_decision[0].move_data == move_name else '0,')
-            f.write('\n')
+print('Write move data to file...')
+with open('data/unique_moves.csv', 'w') as f:
+    f.write(','.join(moves))
 
-            # Output Team 2 Pokemon switch
-            for pkm_name in pkms:
-                f.write('1,' if len(datapoint.p2_decision) > 0 and datapoint.p2_decision[0].move_data == pkm_name else '0,')
-            f.write('\n')
+with open(f'data/datapoints.csv', 'w') as f:
+    for datapoint in tqdm(datapoints):
+        if len(datapoint.p1_decision) and len(datapoint.p2_decision):
+            for pkm in datapoint.teams['p1'].roster:
+                f.write(f"{key[datapoint.teams['p1'].roster[pkm].name]}")
+                f.write(f",{datapoint.teams['p1'].roster[pkm].hp}")
+                f.write(f",{datapoint.teams['p1'].currPkm == pkm}\n")
+            f.write('|-s-|\n')
+
+            for pkm in datapoint.teams['p2'].roster:
+                f.write(f"{key[datapoint.teams['p2'].roster[pkm].name]}")
+                f.write(f",{datapoint.teams['p2'].roster[pkm].hp}")
+                f.write(f",{datapoint.teams['p2'].currPkm == pkm}\n")
+            f.write('|-s-|\n')
+
+            f.write(f'{datapoint.p1_decision[0].mos},{key[datapoint.p1_decision[0].move_data]}\n')
+            f.write(f'{datapoint.p2_decision[0].mos},{key[datapoint.p2_decision[0].move_data]}\n')
+
+            f.write('|-o-|\n')
