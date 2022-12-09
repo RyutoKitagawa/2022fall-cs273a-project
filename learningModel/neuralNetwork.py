@@ -6,6 +6,10 @@ import torch.optim as optim
 
 from tqdm import tqdm
 
+import random as rand
+
+from sklearn import metrics
+
 class Pokemon:
     def __init__(self, index, hp, inplay):
         self.index = index
@@ -45,46 +49,52 @@ class DataPoint:
             mos, data = decision.split(',')
             self.decisions.append(Decison(mos == 'True', int(data)))
 
-class AttackOrSwitchNN(nn.Module):
+class NeuralNetwork(nn.Module):
     def __init__(self, pkm, moves):
-        super(AttackOrSwitchNN, self).__init__()
+        super(NeuralNetwork, self).__init__()
 
-        inputNum, outputNum = len(pkm) * 4, 2
-        self.pkm, self.moves = pkm, moves
+    def bulk_predict(self, data):
+        result = []
+        for i, d in enumerate(tqdm(data)):
+            try:
+                result.append((i, self.predict(d)))
+            except Exception as e:
+                pass
 
-        # Input layer represnts the pokemon and their hp and which pokemon is currently in play
-        # The first hidden layer is meant to consider the hp of the pokemon of each player's active pokemon
-        # The second hidden layer is meant to decide if there is a pokemon that can be switched in
-        # The third hidden layer is meant to decide if there is a pokemon that can be switched in
-        # This culminates into the output layer which ultimately decides if player 1 and player 2 should attack or switch
-        self.fc1 = nn.Linear(inputNum, inputNum)
-        self.fc2 = nn.Linear(inputNum, inputNum)
-        self.fc3 = nn.Linear(inputNum, inputNum)
-        self.fc4 = nn.Linear(inputNum, outputNum)
-
-    def forward(self, x):
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = F.relu(self.fc3(x))
-        x = self.fc4(x)
-        return F.softmax(x, dim = 0)
+        return result
 
     def train(self, data):
         optimizer = optim.SGD(self.parameters(), lr=0.01)
 
-        for i in tqdm(range(len(data))):
-            optimizer.zero_grad()
+        epoch, batch_size = 100, 3000
+        indexes = [i for i in range(len(data))]
 
-            # Get the targets from the data
-            target = torch.tensor([float(data[i].decisions[0].mos), float(data[i].decisions[1].mos)])
+        for _ in tqdm(range(epoch)):
+            rand.shuffle(indexes)
 
-            try:
-                output = self.predict(data[i])
-                loss = F.binary_cross_entropy(output, target)
-                loss.backward()
-                optimizer.step()
-            except Exception as e:
-                pass
+            for i in indexes[:batch_size]:
+                optimizer.zero_grad()
+
+                # Get the targets from the data
+                target = self.get_target(data[i])
+
+                try:
+                    output = self.predict(data[i])
+                    loss = F.cross_entropy(output, target)
+                    loss.backward()
+                    optimizer.step()
+
+                    if loss < 0.1:
+                        break
+
+                except Exception as e:
+                    pass
+
+    def save(self, path):
+        torch.save(self.state_dict(), path)
+
+    def load(self, path):
+        self.load_state_dict(torch.load(path))
 
     def predict(self, data):
         def gethp(team):
@@ -106,6 +116,35 @@ class AttackOrSwitchNN(nn.Module):
 
         return output
 
+    def forward(self, x):
+        for layer in self.layers:
+            x = F.relu(layer(x))
+
+        return F.softmax(x, dim = 0)
+
+
+# Class that inherits from the NeuralNetwork and 
+class AttackOrSwitchNN(NeuralNetwork):
+    def __init__(self, pkm, moves):
+        super().__init__(pkm, moves)
+
+        inputNum, outputNum = len(pkm) * 4, 2
+        self.pkm, self.moves = pkm, moves
+
+        # Input layer represnts the pokemon and their hp and which pokemon is currently in play
+        # The first hidden layer is meant to consider the hp of the pokemon of each player's active pokemon
+        # The second hidden layer is meant to decide if there is a pokemon that can be switched in
+        # The third hidden layer is meant to decide if there is a pokemon that can be switched in
+        # This culminates into the output layer which ultimately decides if player 1 and player 2 should attack or switch
+        layerSizes = [inputNum, (inputNum + outputNum) // 2, outputNum]
+
+        self.layers = nn.ModuleList()
+        for i in range(len(layerSizes) - 1):
+            self.layers.append(nn.Linear(layerSizes[i], layerSizes[i + 1]))
+
+    def get_target(self, data):
+        return torch.tensor([float(data.decisions[0].mos), float(data.decisions[1].mos)])
+
     def predict_print(self, data):
         output = self.predict(data)
 
@@ -119,108 +158,82 @@ class AttackOrSwitchNN(nn.Module):
             try:
                 output = self.predict(d)
 
-                if output[0] > 0.5 and d.decisions[0].mos:
-                    correct += 1
-                elif output[0] < 0.5 and not d.decisions[0].mos:
-                    correct += 1
-
-                if output[1] > 0.5 and d.decisions[1].mos:
-                    correct += 1
-                elif output[1] < 0.5 and not d.decisions[1].mos:
-                    correct += 1
+                correct += int((output[0] > 0.5 and d.decisions[0].mos) or (output[0] < 0.5 and not d.decisions[0].mos))
+                correct += int((output[1] > 0.5 and d.decisions[1].mos) or (output[1] < 0.5 and not d.decisions[1].mos))
 
             except Exception as e:
                 total -= 1
 
         return correct / total
 
-class PkmNN(nn.Module):
+class PkmNN(NeuralNetwork):
     def __init__(self, pkm, moves):
-        super(PkmNN, self).__init__()
+        super().__init__(pkm, moves)
 
         inputNum, outputNum = len(pkm) * 4, 2 * len(moves) + 2 * len(pkm)
         self.pkm, self.moves = pkm, moves
 
-        self.fc1 = nn.Linear(inputNum, 200)
-        self.fc2 = nn.Linear(200, 400)
-        self.fc3 = nn.Linear(400, outputNum)
+        layerSizes = [inputNum, (inputNum + outputNum) // 2, outputNum]
+        self.layers = nn.ModuleList()
+        for i in range(len(layerSizes) - 1):
+            self.layers.append(nn.Linear(layerSizes[i], layerSizes[i + 1]))
 
-    def forward(self, x):
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = torch.sigmoid(self.fc3(x))
-        return x
+    def predict_print(self, data):
+        output = self.predict(data)
 
-    def train(self, features, targets):
-        optimizer = optim.SGD(self.parameters(), lr=0.01)
+        decision1 = torch.argmax(output[:len(output) // 2])
+        decision2 = torch.argmax(output[len(output) // 2:])
 
-        for i in tqdm(range(len(features))):
-            optimizer.zero_grad()
+        print('Player 1: ', end = '')
+        if decision1 >= len(pkms):
+            print(f'Attack with {moves[decision1 - len(pkms)]}')
+        else:
+            print(f'Switch to {pkms[decision1]}')
 
-            output = self.predict(features[i])
-            targets[i] = torch.tensor([float(k) for j in targets[i] for k in j.split(',')[:-1]])
-            loss = F.binary_cross_entropy(output, targets[i])
-            loss.backward()
-            optimizer.step()
+        print('Player 2: ', end = '')
+        if decision2 >= len(pkms):
+            print(f'Attack with {moves[decision2 - len(pkms)]}')
+        else:
+            print(f'Switch to {pkms[decision2]}')
 
-    def predict(self, features):
-        features = [float(j) for i in features for j in i.split(',')[:-1]]
-        output = self.forward(torch.tensor(features))
+    def get_target(self, data):
+        target = torch.tensor([0] * (2 * len(pkms) + 2 * len(moves)))
+        if not data.decisions[0].mos:
+            target[data.decisions[0].data] = 1
+        else:
+            target[len(pkms) + data.decisions[0].data] = 1
 
-        return output
+        if not data.decisions[1].mos:
+            target[len(pkms) + len(moves) + data.decisions[1].data] = 1
+        else:
+            target[2 * len(pkms) + len(moves) + data.decisions[1].data] = 1
 
-    def predict_print(self, features):
-        features = [float(j) for i in features for j in i.split(',')[:-1]]
-        output = self.forward(torch.tensor(features))
+        return target
 
-        print('Team 1 Decision:', key[torch.argmax(output[:len(key)])])
-        print('Team 2 Decision:', key[torch.argmax(output[len(key):])])
+    def calculate_error(self, data):
+        correct, total = 0, len(data) * 2
+        
+        for d in tqdm(data):
+            try:
+                output = self.predict(d)
+                decision1 = torch.argmax(output[:len(output) // 2])
+                decision2 = torch.argmax(output[len(output) // 2:])
 
-def prettyPrintFeatures(features):
-    print('Team 1:')
-    for i, ele in enumerate(features[0].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{pkms[i]}({ele}),', end=' ')
-    print()
+                if not d.decisions[0].mos:
+                    correct += int(d.decisions[0].data == decision1)
+                else:
+                    correct += int(d.decisions[0].data == decision1 - len(pkms))
 
-    print('Team 2:')
-    for i, ele in enumerate(features[1].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{pkms[i]}({ele}),', end=' ')
-    print()
+                if not d.decisions[1].mos:
+                    correct += int(d.decisions[1].data == decision1)
+                else:
+                    correct += int(d.decisions[1].data == decision1 - len(pkms))
 
-    print('Team 1 Pokemon Currently In Play: ', end='')
-    for i, ele in enumerate(features[2].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{pkms[i]}')
+            except Exception as e:
+                total -= 1
 
-    print('Team 2 Pokemon Currently In Play: ', end='')
-    for i, ele in enumerate(features[3].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{pkms[i]}')
+        return (total - correct) / total
 
-def prettyPrintTarget(target):
-    print('Team 1 Decision:', end = '')
-    for i, ele in enumerate(target[0].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{moves[i]}', end='')
-
-    for i, ele in enumerate(target[1].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{pkms[i]}', end='')
-
-    print()
-
-    print('Team 2 Decision:', end = '')
-    for i, ele in enumerate(target[2].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{moves[i]}', end='')
-
-    for i, ele in enumerate(target[3].split(',')[:-1]):
-        if float(ele) > 0:
-            print(f'{pkms[i]}', end='')
-
-    print()
 
 print('Loading Pokemon Data ...')
 with open('data/unique_pokemon.csv', 'r') as f:
@@ -232,9 +245,9 @@ with open('data/unique_moves.csv', 'r') as f:
 
 print('Loading Training Data ...')
 with open('data/datapoints.csv', 'r') as f:
+    count = 0
     print('Splitting Data ...')
     data, datapoints = [], f.read().split('\n|-o-|\n')
-    flag = True
     for datapoint in tqdm(datapoints):
         if len(datapoint.split('\n|-s-|\n')) == 3:
             team1, team2, decisions = datapoint.split('\n|-s-|\n')
@@ -244,11 +257,21 @@ training_data_ratio = 0.6
 training_data = data[:int(len(data) * training_data_ratio)]
 testing_data = data[int(len(data) * training_data_ratio):]
 
-#net = PkmNN(pkms, moves)
 net = AttackOrSwitchNN(pkms, moves)
-print('Training ...')
-net.train(training_data)
-print('Calculating Error ...')
-print(net.calculate_error(training_data))
-print(net.calculate_error(testing_data))
+#net = PkmNN(pkms, moves)
+#print('Training ...')
+#net.train(training_data)
+#net.save('models/TrueChoice.model')
+net.load('models/attackSwitch.model')
+#print('Calculating Error ...')
+#print('Training Error Rate:', net.calculate_error(training_data))
+#print('Test Error Rate:', net.calculate_error(testing_data))
 net.predict_print(data[0])
+prediction_full = net.bulk_predict(testing_data)
+true_predictions = [int(j.mos) for i in prediction_full for j in data[i[0]].decisions]
+predictions = [j for i in prediction_full for j in i[1]]
+error = sum([int(abs(i - j) > 0.5) for i, j in zip(true_predictions, predictions)]) / len(true_predictions)
+
+fpr, tpr, thresholds = metrics.roc_curve(true_predictions, predictions)
+roc_auc = metrics.auc(fpr, tpr)
+display = metrics.RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=roc_auc, estimator_name='example estimator')
